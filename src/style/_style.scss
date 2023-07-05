@@ -1,0 +1,241 @@
+@use 'sass:math';
+@import 'scale/scale.scss'; 
+@import 'scale/settings.scss'; 
+@import 'scale/breakpoints.scss'; 
+
+$root-font-size: 100;
+$wide-desktop-width: 1920px;
+$low-desktop-width: 900px;
+$desktop-width: 1600px;
+$tablet-width: 768px;
+$mobile-width: 360px;
+
+html {
+  --root-font-size: #{$root-font-size}px;
+  font-size: #{$root-font-size}px;
+
+  @include low-desktop {
+    $min-screen-width: 500;
+    $mid-screen-width: 1550;
+
+    @include css-lock(#{$min-screen-width * calc($root-font-size / $mid-screen-width)}, $root-font-size, $min-screen-width, $mid-screen-width);
+  }
+
+
+  @include tablet {
+    $mid-screen-width: 768;
+    $max-screen-width: 1023;
+
+    @include css-lock(
+      $root-font-size, #{$root-font-size * calc($max-screen-width / $mid-screen-width)},
+      $mid-screen-width,
+      $max-screen-width
+    );
+  }
+
+  @include mobile {
+    $min-screen-width: 300;
+    $mid-screen-width: 360;
+    $max-screen-width: 767;
+
+    @include css-lock-full(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, #{calc($max-screen-width * $root-font-size / $mid-screen-width)}, $min-screen-width, $mid-screen-width, $max-screen-width);
+  }
+}
+
+main {
+  max-width: rem(1920px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main, header, footer {
+  /* overflow: hidden; */
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: $p-font-regular;
+  font-size: rem(20px);
+  line-height: 120%;
+  // color:  #1B1F28;
+  height: 100%;
+  max-width: rem(1920px);
+  margin: 0 auto;
+
+ 
+
+  &.active {
+   
+
+    main {
+      position: relative;
+   
+
+      &::after {
+        content: '';
+        position: absolute;
+        background: rgba(1, 5, 13, 0.7);
+        backdrop-filter: blur(rem(7px));
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+  }
+}
+
+.container {
+  max-width: rem(1920px);
+  margin: 0 auto;
+
+}
+
+.h1 {
+  font-family: $p-font-medium;
+  font-weight: 700;
+  font-size: rem(55px);
+  line-height: 110%;
+  max-width: rem(960px);
+  color: #fff;
+  text-transform: uppercase;
+
+  @include mobile {
+    font-family: $p-font-regular;
+    font-size: rem(28px);
+    font-weight: 400;
+    margin-bottom: rem(10px);
+    color: #1B1F28;
+  }
+}
+
+.h2 {
+  font-family: $p-font-regular;
+  font-size: rem(66px);
+  line-height: rem(72px);
+
+  @include mobile  {
+    font-family: $p-font-regular;
+    font-size: rem(28px);
+    line-height: rem(34px);
+  }
+}
+
+.h3 {
+  font-family: $p-font-regular;
+  font-size: rem(40px);
+  line-height: rem(46px);
+
+  @include mobile  {
+    font-family: $p-font-regular;
+    font-size: rem(20px);
+    line-height: rem(26px);
+    margin-bottom: rem(4px);
+  }
+}
+
+
+.middle {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(24px);
+  height: rem(48px);
+  font-size: rem(16px);
+  line-height: rem(22px);
+  font-family: $p-font-medium;
+  width: rem(192px);
+  transition: all 0.3s ease-in;
+
+
+  @include mobile {
+    width: rem(158px);
+    height: rem(36px);
+    font-size: rem(14px);
+    line-height: rem(20px);
+  }
+
+
+  &:hover {
+    cursor: pointer;
+    background: $p-text;
+    transition: all 0.3s ease-in;
+  }
+}
+
+
+.input {
+  border: none;
+  outline: 1px solid $p-text;
+  height: rem(60px);
+  font-family: $p-font-regular;
+  font-size: rem(20px);
+  line-height: rem(29px);
+  border-radius: rem(30px);
+  padding-left: rem(15px);
+  vertical-align: middle;
+
+  &::placeholder {
+    font-family: $p-font-regular;
+    font-size: rem(16px);
+    line-height: rem(22px)
+  }
+
+  @include mobile {
+    font-size: rem(14px);
+    line-height: rem(18px);
+  }
+
+
+}
+
+
+.txt-light {
+  font-family: $p-font-regular;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  color: $p-text;
+}
+
+
+.input-wrap {
+  position: relative;
+
+  &.error {
+    .input-text {
+      display: block;
+    }
+
+    .input {
+      outline: 1px solid $p-text;
+    }
+  }
+
+  &.confirm {
+    .input-confirm  {
+      display: block;
+    }
+  }
+}
+
+
+
+

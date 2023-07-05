@@ -1,0 +1,23 @@
+
+$b: '.social';
+
+#{$b} {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    width: rem(36px);
+    height: rem(35px);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.telegram {
+      background-image: url('../../img/logo-telegram.svg');
+      margin-right: rem(8px);
+    }
+    &.whatsapp {
+      background-image: url('../../img/logo-w.svg');
+    }
+  }
+}

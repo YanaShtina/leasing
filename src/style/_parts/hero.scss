@@ -1,0 +1,99 @@
+$b: '.hero';
+
+#{$b} {
+  background: $p-background-gradient;
+  padding-top: rem(250px) ;
+  transform: translateY(-200px);
+
+  &__top {
+    padding: 0 rem($p-padding-pc);
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(30px);
+  }
+
+  &__title {
+    margin-right: rem(80px);
+  }
+
+  &__btn {
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $p-accent-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in;
+
+
+    span {
+      font-size: rem(16px);
+      line-height: 120%;
+      width: min-content;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in;
+
+      span {
+        font-family: $p-font-medium;
+      }
+    }
+  }
+
+  &__img {
+    width: rem(1100px);
+    height: rem(510px);
+    margin: 0 auto;
+    transform: translateY(50px);
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+
+    &.avans {
+      right: 0;
+    }
+  }
+
+  &__txt {
+    color: #fff;
+    font-size: rem(32px);
+    line-height: 110%;
+    font-family: $p-font-medium;
+    text-align: center;
+
+    span {
+      color: $p-accent-color;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    .arm {
+      width: rem(40px);
+      height: rem(40px);
+      position: absolute;
+      top: rem(-50px);
+    }
+
+    .line {
+      position: relative;
+      width: rem(200px);
+      z-index: 5;
+      left: rem(-230px);
+    }
+  }
+}
