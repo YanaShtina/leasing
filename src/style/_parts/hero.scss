@@ -5,6 +5,8 @@ $b: '.hero';
   padding-top: rem(250px) ;
   transform: translateY(-200px);
 
+
+
   &__top {
     padding: 0 rem($p-padding-pc);
     display: flex;
@@ -59,14 +61,6 @@ $b: '.hero';
     }
   }
 
-  &__info {
-    position: absolute;
-    top: 0;
-
-    &.avans {
-      right: 0;
-    }
-  }
 
   &__txt {
     color: #fff;
@@ -79,6 +73,29 @@ $b: '.hero';
       color: $p-accent-color;
     }
   }
+
+  &__info {
+    position: absolute;
+    top: 0;
+
+    &.avans {
+      right: 0;
+      .arm {
+        position: absolute;
+        width: rem(60px);
+        height: rem(60px);
+        top: rem(-40px);
+        left: rem(-15px);
+      }
+      .line {
+        position: absolute;
+        top: rem(-40px);
+        left: rem(-15px);
+        width: rem(260px);
+      }
+    }
+  }
+
 
   &__decor {
     position: absolute;
