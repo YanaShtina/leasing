@@ -1,0 +1,30 @@
+.policy {
+  padding: rem($p-padding-pc);
+  line-height: 110%;
+
+  &__title {
+    font-size: rem(42px);
+   
+    font-family: $p-font-medium;
+    font-weight: 700;
+    margin-bottom: rem(32px);
+  }
+
+  &__subtitle {
+    font-family: $p-font-medium;
+    font-size: rem(22px);
+    margin-bottom: rem(16px);
+  }
+
+  &__wrap {
+    margin-bottom: rem(32px)
+  }
+
+  p {
+    font-family: $p-font-regular;
+    font-size: rem(16px);
+    margin-bottom: rem(4px);
+
+
+  }
+}

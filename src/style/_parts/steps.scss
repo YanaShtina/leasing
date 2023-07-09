@@ -1,0 +1,113 @@
+.steps {
+  background: linear-gradient(136deg, #1D1D1D 0%, #1D1D1D 100%);
+  color: #fff;
+
+  &__container {
+    padding: rem($p-padding-pc);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: $p-margin-small;
+  }
+
+  &__item {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(48px);
+    position: relative;
+
+    &:nth-child(1),
+    &:nth-child(2)
+     {
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../img/line-steps.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: rem(165px);
+        height: rem(2px);
+        right: rem(-80px);
+        top: 33%;
+      }
+    }
+
+    &:nth-child(4) {
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../img/line-steps.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: rem(165px);
+        height: rem(2px);
+        right: rem(-30px);
+        top: 33%;
+      }
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      grid-column: span 3;
+      margin-bottom: 0;
+    }
+
+    &:nth-child(4) {
+      transform: translateX(rem(70px));
+    }
+
+    &:nth-child(5) {
+      transform: translateX(rem(-70px));
+    }
+
+    &-title {
+      font-size: rem(100px);
+      line-height: 110%;
+      color: $p-accent-color;
+      font-family: $p-font-medium;
+      font-weight: 800;
+    }
+
+    &-txt {
+      font-size: rem(16px);
+      line-height: 110%;
+      text-align: center;
+      max-width: rem(300px);
+    }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    background-color: transparent;
+    outline: 1px solid #fff;
+    margin-bottom: rem(16px);
+  }
+
+  &__btn-info {
+    font-size: rem(14px);
+    line-height: 110%;
+    padding-left: rem(20px);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem(6px);
+      height: rem(6px);
+      border-radius: 100%;
+      background-color: $p-accent-color;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

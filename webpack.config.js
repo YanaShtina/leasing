@@ -45,6 +45,12 @@ module.exports = {
       template: 'nunjucks-html-loader!./src/templates/_index.njk',
     }), 
 
+    new HtmlWebpackPlugin({
+      filename: 'policy.html',
+      inject: 'body',
+      template: 'nunjucks-html-loader!./src/templates/policy.njk',
+    }), 
+
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),

@@ -1,0 +1,42 @@
+.footer {
+  background: $p-background-gradient;
+  color: #fff;
+
+  &__container {
+    padding: rem(54px) rem($p-padding-pc);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    font-size: rem(14px);
+    line-height: 110%;
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__link {
+    margin: 0 rem(32px);
+  }
+
+  &__warning {
+    max-width: rem(500px);
+
+    span {
+      color:$p-accent-color ;
+    }
+  }
+  
+  .header__tels {
+    margin-left: rem(24px);
+  }
+  
+  .header__tel {
+    font-size: rem(16px);
+    line-height: 110%;
+  }
+}

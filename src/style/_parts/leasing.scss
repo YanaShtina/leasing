@@ -3,9 +3,13 @@ $b: '.leasing';
 #{$b} {
   padding: 0 rem($p-padding-pc);
   margin-bottom: rem($p-margin-big);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__list {
     display: flex;
+
   }
 
   &__item {

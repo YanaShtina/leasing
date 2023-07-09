@@ -1,0 +1,54 @@
+$b: '.form';
+
+#{$b} {
+  position: relative;
+  margin-bottom: rem($p-margin-big);
+  &__container {
+    padding: 0 rem($p-padding-pc);
+  }
+
+  &__bg {
+    position: absolute;
+    width: rem(860px);
+    height: rem(615px);
+    right: 0;
+    top: rem(125px);
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    
+    }
+  }
+
+  &__title {
+    font-family: $p-font-medium;
+    font-size: rem(38px);
+    line-height: 110%;
+    font-weight: 700;
+    margin-bottom: rem($p-margin-title);
+  }
+
+  &__subtitle {
+    font-family: $p-font-regular;
+    font-size: rem(24px);
+    line-height: 110%;
+    max-width: rem(542px);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: rem(100px);
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20px);
+    max-width: rem(650px);
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2
+  }
+}
