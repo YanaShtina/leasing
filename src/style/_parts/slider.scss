@@ -1,0 +1,159 @@
+.slider {
+  padding:  rem($p-padding-pc) 0;
+  position: relative;
+
+  &__title {
+    margin-bottom: rem(24px);
+  }
+
+  &__subtitle {
+    max-width: rem(575px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:  rem(24px);
+    font-size: rem(24px);
+    line-height: 110%;
+    text-align: center;
+  }
+
+  &__countries {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(24px);
+  }
+
+  &__country {
+    position: relative;
+    padding-left: rem(60px);
+    margin-right: rem(10px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: rem(5px);
+      top: 50%;
+      transform: translateY(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: rem(48px);
+      height: rem(30px);
+      border-radius: rem(4px);
+    }
+
+    &.e {
+      &::before {
+        background-image: url('../../img/flag-europ.svg');
+      }   
+    }
+
+    &.c {
+      &::before {
+        background-image: url('../../img/flag-china.svg');
+      }   
+    }
+
+    &.t {
+      &::before {
+        background-image: url('../../img/flag-turkey.svg');
+      }   
+    }
+
+    &.uk {
+      &::before {
+        background-image: url('../../img/flag-korey.svg');
+      }   
+    }
+  }
+
+  &__add {
+    max-width: rem(500px);
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+
+
+  &__slider {
+/*     width: rem(1600px); */
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: rem(48px);
+    height: rem(830px);
+    max-width: rem(1600px);
+   
+  }
+
+ 
+
+  &__slide {
+    border-radius: rem(24px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: rem(1200px);
+    height: rem(700px);
+    border-radius: rem(24px);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__slide-title-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: rem(40px);
+    display: flex;
+    align-items: center;
+  }
+
+  &__slide-title {
+    background-color: #fff;
+    color: $p-dark-color; 
+    border: 1px solid $p-dark-color;
+    width: max-content;
+    border-radius: rem(8px);
+    margin-right: rem(15px);
+    height: rem(55px);
+    width: rem(300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  
+  }
+.swiper-pagination {
+  bottom: 0;
+  .swiper-pagination-bullet {
+    width: rem(10px);
+    height: rem(10px);
+    background-color: $p-accent-color;
+    opacity: 0.5;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: rem(13px);
+    height: rem(13px);
+    opacity: 1;
+  }
+
+}
+
+.swiper-button-next {
+  right: rem(100px);
+  color: $p-accent-color;
+}
+
+.swiper-button-prev {
+  left: rem(100px);
+  color: $p-accent-color;
+}
+}

@@ -119,7 +119,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpg|jpg|png|webp|gif|svg)$/i,
+        test: /\.(jpg|jpg|png|webp|gif|svg|avif)$/i,
         use: devMode
           ? []
           : [
