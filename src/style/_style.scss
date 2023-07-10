@@ -113,12 +113,12 @@ body {
   color: #fff;
   text-transform: uppercase;
 
-  @include mobile {
+  @include tablet {
     font-family: $p-font-regular;
-    font-size: rem(28px);
+    font-size: rem(32px);
     font-weight: 400;
     margin-bottom: rem(10px);
-    color: #1B1F28;
+    margin-bottom: 0;
   }
 }
 
@@ -254,6 +254,130 @@ body {
     }
   }
 }
+
+.burger {
+  width: rem(50px);
+  height: rem(50px);
+  border-radius: 100%;
+  border: rem(1px) solid #fff;
+  position: relative;
+  z-index: 55;
+  margin-left: auto;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+    width: rem(40px);
+    height: rem(40px);
+    border: none;
+    background-color: #DEE6EA;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.3s ease-in;
+
+    @include mobile {
+      background-color: #DEE6EA;
+    }
+
+    span {
+      background-color: #050A14;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  span {
+    display: inline-block;
+    height: rem(2px);
+    width: rem(23px);
+    border-radius: rem(50px);
+    color: #fff;
+    background-color: #fff;
+    position: absolute;
+    left: rem(13px);
+    transition: all 0.3s ease-in;
+    
+    @include mobile {
+      background-color: #1B1F28;
+      height: rem(2px);
+      width: rem(18px);
+      left: rem(12px);
+    }
+    &:nth-child(1) {
+      top: rem(16px);
+
+      @include mobile {
+        top: rem(13px);
+      }
+    }
+
+    &:nth-child(2) {
+      top: rem(23px);
+
+      @include mobile {
+        top: rem(20px);
+      }
+    }
+
+    &:nth-child(3) {
+      top: rem(30px);
+      width: rem(15px);
+
+      @include mobile {
+        width: rem(9px);
+        top: rem(25px);
+      }
+    }
+  }
+
+  &.active {
+
+    @include mobile {
+      background-color: transparent;
+      border: 1px solid #BFCCDA;
+    }
+    span {
+      transition: all 0.3s ease-in;
+      top: rem(27px);
+      left: rem(15px);
+
+      @include mobile {
+        background-color: #BFCCDA;
+      }
+  
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+
+        @include mobile {
+          left: rem(10px);
+          top: rem(18px);
+        }
+      }
+  
+      &:nth-child(2) {
+        opacity: 0;
+        height: 0;
+        visibility: hidden;
+      }
+  
+      &:nth-child(3) {
+        transform: rotate(45deg);
+        width: rem(25px);
+
+        @include mobile {
+          left: rem(10px);
+          width: rem(18px);
+          top: rem(18px);
+        }
+      }
+    }
+  }
+ }
 
 
 

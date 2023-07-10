@@ -3,6 +3,10 @@
   &__container {
     padding: rem($p-padding-pc);
     background-color: #f7f7f7;
+
+    @include tablet {
+      padding: rem($p-padding-tablet);
+    }
   }
   &__subtitle {
     max-width: rem(850px);
@@ -12,6 +16,11 @@
     font-size: rem(24px);
     line-height: 110%;
     margin-bottom: rem($p-padding-pc);
+
+    @include tablet {
+      margin-bottom: rem(60px);
+      font-size: rem(21px);
+    }
   }
 
   &__list {
@@ -21,12 +30,24 @@
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+
+    @include tablet {
+      flex-wrap: wrap;
+      margin-bottom: rem(60px);
+     
+    }
+
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+      width: 50%;
+      margin-bottom: rem(36px);
+    }
 
     &-info{
       display: flex;

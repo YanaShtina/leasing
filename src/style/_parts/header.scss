@@ -13,7 +13,11 @@ $b: '.header';
     padding-top: rem(40px);
     justify-content: space-between;
     align-items: center;
-    font-size: rem(18px);
+    
+    @include tablet {
+      padding: rem(20px) rem($p-padding-tablet);
+      justify-content: flex-start;
+    }
   }
 
   &__concats {
@@ -23,11 +27,20 @@ $b: '.header';
   &__logo {
     width: rem(36px);
     height: rem(40px);
+    flex-shrink: 0;
+
+    @include tablet {
+      margin-right: rem(30px);
+    }
   }
 
   &__nav-list {
     display: flex;
     align-items: center;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__nav-item {
@@ -48,9 +61,21 @@ $b: '.header';
     flex-direction: column;
     margin-left: rem(50px);
 
+    @include tablet {
+      order: -1;
+      margin-left:0;
+      margin-right: rem(50px);
+    }
+
     &-inner {
       display: flex;
       flex-direction: column;
+
+      @include tablet {
+        flex-direction: row;
+        font-size: rem(16px);
+        line-height: 110%;
+      }
     }
   }
 
@@ -78,6 +103,11 @@ $b: '.header';
     transition: color 0.3s ease-in;
     &:first-child {
       margin-bottom: (8px);
+
+      @include tablet {
+        margin-bottom: 0;
+        margin-right: rem(16px);
+      }
     }
 
     &:hover {

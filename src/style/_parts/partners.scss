@@ -2,6 +2,10 @@
   padding: rem($p-padding-pc);
   background-color: #fff;
 
+  @include tablet {
+    padding: rem($p-padding-tablet);
+  }
+
   &__list {
     max-width: calc(rem(1600px) - rem($p-padding-pc)*2);
     display: flex;
@@ -10,16 +14,31 @@
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+
+    @include tablet {
+      max-width: calc(rem(770px) - rem($p-padding-tablet)*2);
+      margin-bottom: rem(60px);
+    }
   }
 
   &__item {
     margin-right: rem(40px);
     margin-bottom: rem(50px);
     max-height: rem(50px);
+    @include tablet {
+      height: rem(30px);
+      margin-right: rem(10px);
+      margin-bottom: rem(40px);
+      width: rem(200px);
+    }
 
     img {
       height: 100%;
       object-fit: contain;
+
+      @include tablet {
+        width: 100%;
+      }
     }
   }
 }

@@ -82,6 +82,11 @@
     margin-top: rem(48px);
     height: rem(830px);
     max-width: rem(1600px);
+
+    @include tablet {
+      height: rem(530px);
+      max-width: rem(750px);
+    }
    
   }
 
@@ -104,6 +109,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablet {
+      width: rem(650px);
+      height: rem(400px);
+    }
   }
 
   &__slide-title-wrap {
@@ -150,10 +160,20 @@
 .swiper-button-next {
   right: rem(100px);
   color: $p-accent-color;
+
+  @include tablet {
+    right: 0;
+    top: 33%;
+  }
 }
 
 .swiper-button-prev {
   left: rem(100px);
   color: $p-accent-color;
+
+  @include tablet {
+    left: 0;
+    top: 33%;
+  }
 }
 }

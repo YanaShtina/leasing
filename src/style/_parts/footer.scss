@@ -6,6 +6,11 @@
     padding: rem(54px) rem($p-padding-pc);
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      padding: rem(25px) rem($p-padding-tablet);
+    }
+
   }
 
   &__left {
@@ -13,14 +18,25 @@
     align-items: center;
     font-size: rem(14px);
     line-height: 110%;
+
+    @include tablet {
+      font-size: rem(12px);
+    }
   }
 
   &__right {
     display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__link {
     margin: 0 rem(32px);
+    @include tablet {
+      width: min-content;
+    }
   }
 
   &__warning {
@@ -29,14 +45,36 @@
     span {
       border-bottom: 1px  solid $p-accent-color;
     }
+
+    @include tablet {
+      max-width: rem(250px);
+    }
   }
   
   .header__tels {
     margin-left: rem(24px);
+
+    @include tablet {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+ 
+  }
+
+  .header__tels-inner {
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: rem(8px);
+    }
   }
   
   .header__tel {
     font-size: rem(16px);
     line-height: 110%;
+
+    @include tablet {
+      font-size: rem(14px);
+    }
   }
 }

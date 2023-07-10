@@ -6,8 +6,16 @@ $b: '.form';
   max-width: rem(1500px);
   margin-right: auto;
   margin-left: auto;
+
+  @include tablet {
+    margin-bottom: rem(80px);
+  }
   &__container {
     padding: 0 rem($p-padding-pc);
+
+    @include tablet {
+      padding: 0 rem($p-padding-tablet);
+    }
 
   }
 
@@ -17,6 +25,10 @@ $b: '.form';
     height: rem(615px);
     right: 0;
     top: rem(125px);
+
+    @include tablet {
+      display: none;
+    }
 
     img {
       width: 100%;
@@ -31,6 +43,10 @@ $b: '.form';
     line-height: 110%;
     font-weight: 700;
     margin-bottom: rem($p-margin-title);
+
+    @include tablet {
+      font-size: rem(32px);
+    }
   }
 
   &__subtitle {
@@ -41,6 +57,10 @@ $b: '.form';
     margin: 0 auto;
     text-align: center;
     margin-bottom: rem(100px);
+
+    @include tablet {
+      margin-bottom: rem(50px);
+    }
   }
 
   &__form {
@@ -48,6 +68,10 @@ $b: '.form';
     grid-template-columns: repeat(2, 1fr);
     gap: rem(20px);
     max-width: rem(650px);
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__bottom {
