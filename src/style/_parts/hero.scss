@@ -2,11 +2,12 @@ $b: '.hero';
 
 #{$b} {
   background: $p-background-gradient;
-  padding-top: rem(250px) ;
-  transform: translateY(-200px);
+  padding-top: rem(250px);
+  transform: translateY(rem(-200px));
 
   @include tablet {
-    transform: translateY(-150px);
+    transform: translateY(rem(-150px));
+    padding-top: rem(300px);
   }
 
 
@@ -19,11 +20,12 @@ $b: '.hero';
 
     @include tablet {
       padding: 0 rem($p-padding-tablet);
+      transform: translateY(rem(-95px));
     }
 
     @include mobile {
       padding: 0 rem($p-padding-mobile);
-      transform: translateY(-50px);
+      transform: translateY(rem(-50px));
     }
   }
 
@@ -94,7 +96,7 @@ $b: '.hero';
       transform: translateY(80px);
     }
 
-    @include tablet {
+    @include mobile {
       width: rem(320px);
       height: rem(160px);
       transform: translateY(30px);

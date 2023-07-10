@@ -52,7 +52,22 @@ $b: '.header';
     align-items: center;
 
     @include tablet {
-      display: none;
+      right: -1000px;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      flex-direction: column;
+      background: $p-dark-color;
+      top: 0;
+      z-index: 55;
+      padding: rem(20px) rem(100px);
+      width: calc(100% - rem(200px));
+
+      &.active {
+        display: flex;
+     
+        right: 0;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 
@@ -61,11 +76,25 @@ $b: '.header';
     transition: color 0.3s ease-in;
     &:last-child {
       margin-right: 0;
+
+
     }
     &:hover {
       color: $p-accent-color;
       transition: color 0.3s ease-in;
       cursor: pointer;
+    }
+
+    @include tablet {
+      margin-bottom: rem(24px);
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__social {
+    @include tablet {
+      margin-left: rem(24px);
     }
   }
 

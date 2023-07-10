@@ -197,7 +197,7 @@ body {
 .input {
   border: none;
   outline: 1px solid $p-text;
-  height: rem(55px);
+  height: rem(48px);
   font-family: $p-font-regular;
   font-size: rem(20px);
   line-height: rem(29px);
@@ -284,15 +284,15 @@ body {
 
   &:hover {
     cursor: pointer;
-    background-color: #fff;
+    background-color: #1B1F28;
     transition: all 0.3s ease-in;
 
     @include mobile {
-      background-color: #DEE6EA;
+      background-color: #fff;
     }
 
     span {
-      background-color: #050A14;
+      background-color: #1B1F28;
       transition: all 0.3s ease-in;
     }
   }
@@ -302,24 +302,24 @@ body {
     height: rem(2px);
     width: rem(23px);
     border-radius: rem(50px);
-    color: #fff;
-    background-color: #fff;
     position: absolute;
     left: rem(13px);
     transition: all 0.3s ease-in;
+    color: $p-dark-color;
+    background-color: #1B1F28;
     
-    @include mobile {
+     @include mobile {
       background-color: #1B1F28;
       height: rem(2px);
       width: rem(18px);
       left: rem(10px);
-    }
+    } 
     &:nth-child(1) {
       top: rem(16px);
 
       @include mobile {
         top: rem(13px);
-      }
+      } 
     }
 
     &:nth-child(2) {
@@ -327,40 +327,42 @@ body {
 
       @include mobile {
         top: rem(19px);
-      }
+      } 
     }
 
     &:nth-child(3) {
       top: rem(30px);
       width: rem(15px);
+      color: $p-dark-color;
 
-      @include mobile {
+     @include mobile {
         width: rem(9px);
         top: rem(25px);
-      }
+        color: $p-dark-color;
+      } 
     }
   }
 
-  &.active {
-
-    @include mobile {
-      background-color: transparent;
-      border: 1px solid #BFCCDA;
-    }
+  &.active { 
     span {
       transition: all 0.3s ease-in;
       top: rem(27px);
       left: rem(15px);
-
-      @include mobile {
-        background-color: #BFCCDA;
-      }
+      color: $p-dark-color;
+      background-color: #1B1F28;
   
       &:nth-child(1) {
         transform: rotate(-45deg);
 
+
+        @include tablet {
+          left: rem(12px);
+          top: rem(22px);
+          width: rem(25px);
+        }
+
         @include mobile {
-          left: rem(10px);
+          left: rem(7px);
           top: rem(18px);
         }
       }
@@ -375,9 +377,14 @@ body {
         transform: rotate(45deg);
         width: rem(25px);
 
+        @include tablet {
+          left: rem(12px);
+          width: rem(25px);
+          top: rem(22px);
+        }
+
         @include mobile {
-          left: rem(10px);
-          width: rem(18px);
+          left: rem(7px);
           top: rem(18px);
         }
       }
