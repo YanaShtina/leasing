@@ -5,6 +5,10 @@
     padding: rem($p-padding-pc) rem($p-padding-tablet);
   }
 
+  @include mobile {
+    padding: rem($p-padding-tablet) rem($p-padding-mobile);
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -16,6 +20,11 @@
     @include tablet {
       align-items: center;
       max-width: calc(rem(768px) - rem($p-padding-tablet)*2);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      max-width: 100%;
     }
   }
 
@@ -44,8 +53,19 @@
     }
   }
 
+  &__left {
+    @include mobile {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
   &__rigth {
     width: 48%;
     height: rem(350px);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

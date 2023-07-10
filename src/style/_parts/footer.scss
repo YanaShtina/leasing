@@ -11,6 +11,10 @@
       padding: rem(25px) rem($p-padding-tablet);
     }
 
+    @include mobile {
+      padding: rem(25px) rem($p-padding-mobile);
+    }
+
   }
 
   &__left {
@@ -22,6 +26,11 @@
     @include tablet {
       font-size: rem(12px);
     }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__right {
@@ -29,6 +38,7 @@
 
     @include tablet {
       flex-direction: column;
+     
     }
   }
 
@@ -36,6 +46,11 @@
     margin: 0 rem(32px);
     @include tablet {
       width: min-content;
+    }
+
+    @include mobile {
+      margin: 0;
+      margin-bottom: rem(16px);
     }
   }
 
@@ -48,6 +63,10 @@
 
     @include tablet {
       max-width: rem(250px);
+    }
+
+    @include mobile {
+      max-width: rem(180px);
     }
   }
   

@@ -2,6 +2,10 @@
   padding:  rem($p-padding-pc) 0;
   position: relative;
 
+  @include mobile {
+    padding: rem($p-padding-tablet) 0;
+  }
+
   &__title {
     margin-bottom: rem(24px);
   }
@@ -14,6 +18,12 @@
     font-size: rem(24px);
     line-height: 110%;
     text-align: center;
+
+    @include mobile {
+      font-size: rem(16px);
+      line-height: 120%;
+      max-width: 90%;
+    }
   }
 
   &__countries {
@@ -21,12 +31,30 @@
     align-items: center;
     justify-content: center;
     margin-bottom: rem(24px);
+
+    @include mobile {
+      flex-direction: column;
+      font-size: rem(16px);
+      line-height: 120%;
+      align-items: flex-start;
+      max-width: max-content;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 0;
+    }
   }
 
   &__country {
     position: relative;
     padding-left: rem(60px);
     margin-right: rem(10px);
+
+    @include mobile {
+      margin-right: 0;
+      padding-left: rem(40px);
+      margin-bottom: rem(16px);
+     
+    }
 
     &::before {
       content: '';
@@ -39,6 +67,12 @@
       width: rem(48px);
       height: rem(30px);
       border-radius: rem(4px);
+
+      @include mobile {
+        width: rem(40px);
+        height: rem(20px);
+        border-radius: 0;
+      }
     }
 
     &.e {
@@ -71,6 +105,11 @@
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+
+    @include mobile {
+      font-size: rem(16px);
+      line-height: 120%;
+    }
   }
 
 
@@ -86,6 +125,12 @@
     @include tablet {
       height: rem(530px);
       max-width: rem(750px);
+    }
+
+    @include mobile {
+      height: rem(520px);
+      max-width: rem(360px);
+      margin-top: 0;
     }
    
   }
@@ -114,6 +159,12 @@
       width: rem(650px);
       height: rem(400px);
     }
+
+    @include mobile {
+      width: 100%;
+      height: rem(400px);
+      object-fit: contain;
+    }
   }
 
   &__slide-title-wrap {
@@ -123,6 +174,10 @@
     bottom: rem(40px);
     display: flex;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__slide-title {
@@ -138,7 +193,21 @@
     align-items: center;
     justify-content: center;
 
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: rem(16px);
+      height: rem(50px);
+      font-size: rem(14px);
+    }
+
   
+  }
+
+  &__slide-btn {
+    @include mobile {
+      width: rem(300px);
+    }
   }
 .swiper-pagination {
   bottom: 0;
@@ -165,6 +234,10 @@
     right: 0;
     top: 33%;
   }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .swiper-button-prev {
@@ -174,6 +247,10 @@
   @include tablet {
     left: 0;
     top: 33%;
+  }
+
+  @include mobile {
+    display: none;
   }
 }
 }

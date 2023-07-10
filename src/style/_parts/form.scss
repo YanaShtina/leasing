@@ -17,6 +17,10 @@ $b: '.form';
       padding: 0 rem($p-padding-tablet);
     }
 
+    @include mobile {
+      padding: 0 rem($p-padding-mobile);
+    }
+
   }
 
   &__bg {
@@ -61,6 +65,10 @@ $b: '.form';
     @include tablet {
       margin-bottom: rem(50px);
     }
+
+    @include mobile {
+      font-size: rem(14px);
+    }
   }
 
   &__form {
@@ -72,11 +80,28 @@ $b: '.form';
     @include tablet {
       max-width: 100%;
     }
+
+    @include mobile {
+      gap: rem(15px) 0;
+    }
   }
 
   &__bottom {
     display: flex;
     flex-direction: column;
     grid-column: span 2
+  }
+
+  &__btn {
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .input-wrap {
+    @include mobile {
+      grid-column: span 2;
+      max-width: 100%;
+    }
   }
 }

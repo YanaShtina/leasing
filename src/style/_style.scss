@@ -120,6 +120,10 @@ body {
     margin-bottom: rem(10px);
     margin-bottom: 0;
   }
+
+  @include mobile {
+    font-size: rem(24px);
+  }
 }
 
 .h2 {
@@ -147,7 +151,7 @@ body {
     font-family: $p-font-medium;
     font-size: rem(20px);
     line-height: rem(26px);
-    margin-bottom: rem(4px);
+    margin-bottom: rem(16px);
   }
 }
 
@@ -175,8 +179,8 @@ body {
 
 
   @include mobile {
-    width: rem(158px);
-    height: rem(36px);
+    width: rem(250px);
+    height: rem(50px);
     font-size: rem(14px);
     line-height: rem(20px);
   }
@@ -264,6 +268,7 @@ body {
   z-index: 55;
   margin-left: auto;
   display: none;
+  flex-shrink: 0;
 
   @include tablet {
     display: block;
@@ -273,7 +278,8 @@ body {
     width: rem(40px);
     height: rem(40px);
     border: none;
-    background-color: #DEE6EA;
+    background-color: #fff;
+    margin-left: rem(25px);
   }
 
   &:hover {
@@ -306,7 +312,7 @@ body {
       background-color: #1B1F28;
       height: rem(2px);
       width: rem(18px);
-      left: rem(12px);
+      left: rem(10px);
     }
     &:nth-child(1) {
       top: rem(16px);
@@ -320,7 +326,7 @@ body {
       top: rem(23px);
 
       @include mobile {
-        top: rem(20px);
+        top: rem(19px);
       }
     }
 

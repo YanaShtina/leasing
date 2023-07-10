@@ -6,6 +6,10 @@
     padding: rem($p-padding-tablet);
   }
 
+  @include mobile {
+    padding: rem($p-padding-tablet) rem($p-padding-mobile);
+  }
+
   &__list {
     max-width: calc(rem(1600px) - rem($p-padding-pc)*2);
     display: flex;
@@ -19,18 +23,36 @@
       max-width: calc(rem(770px) - rem($p-padding-tablet)*2);
       margin-bottom: rem(60px);
     }
+
+    @include mobile {
+      max-width:100%;
+      margin-bottom: rem(24px);
+    }
   }
 
   &__item {
     margin-right: rem(40px);
     margin-bottom: rem(50px);
     max-height: rem(50px);
+
     @include tablet {
       height: rem(30px);
       margin-right: rem(10px);
       margin-bottom: rem(40px);
       width: rem(200px);
     }
+
+    @include mobile {
+      height: rem(25px);
+      width: rem(160px);
+      margin-right: 0;
+
+      &:last-child {
+      width: 100%;
+      }
+    }
+
+
 
     img {
       height: 100%;

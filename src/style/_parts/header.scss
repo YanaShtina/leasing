@@ -18,10 +18,19 @@ $b: '.header';
       padding: rem(20px) rem($p-padding-tablet);
       justify-content: flex-start;
     }
+
+    @include mobile {
+      padding: rem(20px) rem($p-padding-mobile);
+    }
   }
 
   &__concats {
     display: flex;
+
+    @include mobile {
+      // margin-right: rem(30px);
+      align-items: center;
+    }
   }
 
   &__logo {
@@ -31,6 +40,10 @@ $b: '.header';
 
     @include tablet {
       margin-right: rem(30px);
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -67,6 +80,10 @@ $b: '.header';
       margin-right: rem(50px);
     }
 
+    @include tablet {
+      margin-right: 0;
+    }
+
     &-inner {
       display: flex;
       flex-direction: column;
@@ -76,6 +93,10 @@ $b: '.header';
         font-size: rem(16px);
         line-height: 110%;
       }
+
+      @include mobile {
+        flex-direction: column;
+      }
     }
   }
 
@@ -84,6 +105,7 @@ $b: '.header';
     font-size: rem(12px);
     position: relative;
     transform: translateX(15px);
+    line-height: 110%;
     
 
     &::before {
@@ -97,16 +119,32 @@ $b: '.header';
       border-radius: 100%;
       background-color: #62C766;
     }
+
+    @include mobile {
+      transform: translateX(0px);
+    }
   }
 
   &__tel {
     transition: color 0.3s ease-in;
+    line-height: 110%;
+  
+
+    @include mobile {
+      font-size: rem(14px);
+      margin-bottom: (4px);
+    }
     &:first-child {
       margin-bottom: (8px);
 
       @include tablet {
         margin-bottom: 0;
         margin-right: rem(16px);
+      }
+
+      @include mobile {
+        margin-right: 0;
+        margin-bottom: (8px);
       }
     }
 

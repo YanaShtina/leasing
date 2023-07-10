@@ -8,6 +8,10 @@
     @include tablet {
       padding: rem($p-padding-pc) rem($p-padding-tablet);
     }
+
+    @include mobile {
+      padding: rem($p-padding-tablet) rem($p-padding-mobile);
+    }
   }
 
   &__list {
@@ -23,6 +27,42 @@
     align-items: center;
     margin-bottom: rem(48px);
     position: relative;
+
+    @include mobile {
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../img/line-steps.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: rem(145px);
+        height: rem(2px);
+        bottom: rem(-30px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+
+
+    &:last-child {
+
+      @include mobile {
+        margin-bottom: 0 !important;
+
+        &::before {
+          display: none;
+        }
+      }
+
+    }
+
+
+
+    @include mobile {
+      grid-column: span 6;
+      margin-bottom: rem(55px);
+    }
 
     &:nth-child(1),
     &:nth-child(2)
@@ -43,6 +83,10 @@
           right: rem(-60px);
           top: 22%;
         }
+
+        @include mobile {
+          display: none;
+        }
       }
     }
 
@@ -57,6 +101,10 @@
         height: rem(2px);
         right: rem(-30px);
         top: 33%;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
 
@@ -64,6 +112,11 @@
     &:nth-child(5) {
       grid-column: span 3;
       margin-bottom: 0;
+
+      @include mobile {
+        grid-column: span 6;
+        margin-bottom: rem(55px);
+      }
     }
 
     &:nth-child(4) {
@@ -72,6 +125,10 @@
       @include tablet {
         transform: translateX(rem(50px));
       }
+
+      @include mobile {
+        transform: translateX(rem(0px));
+      }
     }
 
     &:nth-child(5) {
@@ -79,6 +136,10 @@
 
       @include tablet {
         transform: translateX(rem(-50px));
+      }
+
+      @include mobile {
+        transform: translateX(rem(0px));
       }
     }
 
@@ -105,6 +166,12 @@
         max-width: rem(200px);
       }
 
+      @include mobile {
+        font-size: rem(16px);
+        line-height: 130%;
+        max-width: rem(300px);
+      }
+
       a,
       span {
         display: inline;
@@ -123,6 +190,10 @@
     background-color: transparent;
     outline: 1px solid #fff;
     margin-bottom: rem(16px);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__btn-info {

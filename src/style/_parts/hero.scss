@@ -5,6 +5,10 @@ $b: '.hero';
   padding-top: rem(250px) ;
   transform: translateY(-200px);
 
+  @include tablet {
+    transform: translateY(-150px);
+  }
+
 
 
   &__top {
@@ -16,10 +20,19 @@ $b: '.hero';
     @include tablet {
       padding: 0 rem($p-padding-tablet);
     }
+
+    @include mobile {
+      padding: 0 rem($p-padding-mobile);
+      transform: translateY(-50px);
+    }
   }
 
   &__title {
     margin-right: rem(80px);
+
+    @include mobile {
+      margin-right: rem(24px);
+    }
   }
 
   &__btn {
@@ -30,6 +43,7 @@ $b: '.hero';
     text-transform: uppercase;
     background-color: $p-accent-color;
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease-in;
@@ -39,11 +53,21 @@ $b: '.hero';
       height: rem(80px);
     }
 
+    @include mobile {
+/*       width: rem(60px);
+      height: rem(60px); */
+    }
+
 
     span {
       font-size: rem(16px);
       line-height: 120%;
       width: min-content;
+
+      @include mobile {
+        font-size: rem(14px);
+        line-height: 110%;
+      }
     }
 
     &:hover {
@@ -70,12 +94,23 @@ $b: '.hero';
       transform: translateY(80px);
     }
 
+    @include tablet {
+      width: rem(320px);
+      height: rem(160px);
+      transform: translateY(30px);
+    }
+
+
     img {
       width: 100%;
       object-fit: contain;
       transform: translateX(rem(45px));
       position: relative;
       z-index:5;
+
+      @include mobile {
+        transform: translateX(rem(0px));
+      }
     }
   }
 
@@ -96,6 +131,10 @@ $b: '.hero';
     @include tablet {
       font-size: rem(26px);
     }
+
+    @include mobile {
+      font-size: rem(16px);
+    }
   }
 
   &__info {
@@ -111,6 +150,11 @@ $b: '.hero';
         left: rem(80px);
       }
 
+      @include mobile {
+        left: rem(120px);
+        top: rem(-95px);
+      }
+
       .arm {
         position: absolute;
         width: rem(50px);
@@ -124,11 +168,19 @@ $b: '.hero';
         top: rem(-20px);
         left: rem(-45px);
         width: rem(260px);
+
+        @include mobile {
+          display: none;
+        }
       }
       .hero__txt {
         top: rem(55px);
         right: initial;
         left: rem(-145px);
+
+        @include mobile {
+          left: rem(-115px);
+        }
       }
     }
 
@@ -137,6 +189,11 @@ $b: '.hero';
 
       @include tablet {
         right: rem(-45px);
+      }
+
+      @include mobile {
+        right: 0;
+        top: rem(-30px);
       }
 
       .arm {
@@ -150,12 +207,20 @@ $b: '.hero';
           width: rem(50px);
           height: rem(50px);
         }
+
+        @include mobile {
+          left: rem(155px);
+        }
       }
       .line {
         position: absolute;
         top: rem(-40px);
         left: rem(-150px);
         width: rem(260px);
+
+        @include mobile {
+            display: none;
+        }
       }
       .hero__txt {
         top: rem(10px);

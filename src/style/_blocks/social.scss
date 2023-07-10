@@ -7,10 +7,15 @@ $b: '.social';
 
   &__item {
     width: rem(36px);
-    height: rem(35px);
+    height: rem(36px);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
+/*     @include mobile {
+      width: rem(30px);
+      height: rem(30px);
+    } */
 
     &.telegram {
       background-image: url('../../img/logo-telegram.svg');
