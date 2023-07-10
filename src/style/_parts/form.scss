@@ -3,8 +3,12 @@ $b: '.form';
 #{$b} {
   position: relative;
   margin-bottom: rem($p-margin-big);
+  max-width: rem(1500px);
+  margin-right: auto;
+  margin-left: auto;
   &__container {
     padding: 0 rem($p-padding-pc);
+
   }
 
   &__bg {
