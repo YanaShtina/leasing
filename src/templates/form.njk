@@ -7,37 +7,37 @@
     <div class="form__bg">
       <img src="../img/bg-form.png" alt="">
     </div>
-    <form class="form__form " action="">
+    <form class="form__form " action="POST">
       <div class="input-wrap">
         <label for="1">Марка авто</label>
-        <input id="1" type="text" class="input" placeholder="Марка">
+        <input id="1" type="text" class="input" placeholder="Марка" name='marka'>
       </div>
 
       <div class="input-wrap">
         <label for="2">Модель авто</label>
-        <input id="2" type="text" class="input" placeholder="Модель авто">
+        <input id="2" type="text" class="input" placeholder="Модель авто" name='model'>
       </div>
 
       <div class="input-wrap">
         <label for="3">Год авто</label>
-        <input id="3" type="text" class="input" placeholder="Модель авто">
+        <input id="3" type="text" class="input" placeholder="Год авто"  name='year'>
       </div>
 
 
       <div class="input-wrap">
         <label for="4">Бюджет авто</label>
-        <input id="4" type="text" class="input" placeholder="Бюджет">
+        <input id="4" type="text" class="input" placeholder="Бюджет" name='budget'>
       </div>
 
 
       <div class="input-wrap">
         <label for="6">Регион поиска</label>
-        <input id="6" type="text" class="input" placeholder="Регион">
+        <input id="6" type="text" class="input" placeholder="Регион" name='region'>
       </div>
 
       <div class="input-wrap">
         <label for="7">Контактный номер</label>
-        <input id="7" type="text" class="input" placeholder="Номер">
+        <input id="7" type="text" class="input js-tel" placeholder="Номер" name='number'>
       </div>
 
       <div class="form__bottom">
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <button class="btn form__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+      <button class="btn form__btn" type='submit'>ОСТАВИТЬ ЗАЯВКУ</button>
        </div>
     </form>
 

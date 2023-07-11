@@ -13,10 +13,11 @@ export default {
       },
       pagination: {
         el: '.swiper-pagination',
+        clickable: true,
       },
       effect: 'cards',
     });
 
-    console.log('slider,', swiper);
+
   }
 }

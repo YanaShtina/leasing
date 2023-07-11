@@ -278,7 +278,7 @@ body {
     width: rem(40px);
     height: rem(40px);
     border: none;
-    background-color: #fff;
+    background-color: transparent;
     margin-left: rem(25px);
   }
 
@@ -287,12 +287,9 @@ body {
     background-color: #1B1F28;
     transition: all 0.3s ease-in;
 
-    @include mobile {
-      background-color: #fff;
-    }
 
     span {
-      background-color: #1B1F28;
+      background-color: #fff;
       transition: all 0.3s ease-in;
     }
   }
@@ -305,11 +302,10 @@ body {
     position: absolute;
     left: rem(13px);
     transition: all 0.3s ease-in;
-    color: $p-dark-color;
-    background-color: #1B1F28;
+    background-color: #fff;
     
      @include mobile {
-      background-color: #1B1F28;
+      background-color: #fff;
       height: rem(2px);
       width: rem(18px);
       left: rem(10px);
@@ -349,7 +345,7 @@ body {
       top: rem(27px);
       left: rem(15px);
       color: $p-dark-color;
-      background-color: #1B1F28;
+      background-color: #fff;
   
       &:nth-child(1) {
         transform: rotate(-45deg);

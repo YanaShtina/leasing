@@ -10,6 +10,10 @@ $b: '.hero';
     padding-top: rem(300px);
   }
 
+  @include mobile {
+    padding-top: rem(250px);
+  }
+
 
 
   &__top {
@@ -26,6 +30,7 @@ $b: '.hero';
     @include mobile {
       padding: 0 rem($p-padding-mobile);
       transform: translateY(rem(-50px));
+      margin-bottom: rem(100px);
     }
   }
 
@@ -153,8 +158,8 @@ $b: '.hero';
       }
 
       @include mobile {
-        left: rem(120px);
-        top: rem(-95px);
+        left: 0;
+        top: 0;
       }
 
       .arm {
@@ -163,6 +168,14 @@ $b: '.hero';
         height: rem(50px);
         top: rem(0px);
         left: rem(-115px);
+
+
+        @include mobile {
+          width: rem(45px);
+          height: rem(45px);
+          top: rem(-130px);
+          left: 0;
+        }
       }
       .line {
         transform: rotate(45deg);
@@ -172,7 +185,10 @@ $b: '.hero';
         width: rem(260px);
 
         @include mobile {
-          display: none;
+          width: rem(145px);
+          left: 0;
+          top: rem(-120px);
+          transform: rotate(85deg);
         }
       }
       .hero__txt {
@@ -181,7 +197,8 @@ $b: '.hero';
         left: rem(-145px);
 
         @include mobile {
-          left: rem(-115px);
+          left: rem(55px);
+          top: rem(-130px);
         }
       }
     }
@@ -212,6 +229,7 @@ $b: '.hero';
 
         @include mobile {
           left: rem(155px);
+          top: rem(-70px);
         }
       }
       .line {
@@ -221,12 +239,19 @@ $b: '.hero';
         width: rem(260px);
 
         @include mobile {
-            display: none;
+          width: rem(160px);
+          left: rem(30px);
+          transform:rotate(-29deg);
         }
       }
       .hero__txt {
         top: rem(10px);
         right: 0;
+
+        @include mobile {
+          top: rem(-60px);
+          right: rem(55px);
+        }
       }
     }
     
