@@ -1,5 +1,6 @@
 .slider {
   padding:  rem($p-padding-pc) 0;
+  padding-bottom: 0;
   position: relative;
 
   @include mobile {
@@ -119,8 +120,8 @@
     margin-right: auto;
     margin-left: auto;
     margin-top: rem(48px);
-    height: rem(850px);
-    max-width: rem(1600px);
+    height: rem(750px);
+    max-width: rem(1100px);
 
     @include tablet {
       height: rem(530px);
@@ -128,7 +129,7 @@
     }
 
     @include mobile {
-      height: rem(520px);
+      height: rem(500px);
       max-width: rem(360px);
       margin-top: 0;
     }
@@ -145,8 +146,8 @@
 
   &__img {
     object-fit: cover;
-    width: rem(1200px);
-    height: rem(700px);
+    width: rem(1000px);
+    height: rem(600px);
     border-radius: rem(24px);
     margin-left: auto;
     margin-right: auto;
@@ -181,23 +182,24 @@
   }
 
   &__slide-title {
-    background-color: #fff;
+    background-color: transparent;
     color: $p-dark-color; 
     border: 1px solid $p-dark-color;
     width: max-content;
     border-radius: rem(8px);
     margin-right: rem(15px);
-    height: rem(55px);
+    height: rem(50px);
     width: rem(300px);
     display: flex;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
 
 
     @include mobile {
       margin-right: 0;
       margin-bottom: rem(16px);
-      height: rem(50px);
+      height: rem(45px);
       font-size: rem(14px);
     }
 

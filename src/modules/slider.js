@@ -1,12 +1,10 @@
-import Swiper, { Pagination, Navigation } from 'swiper';
+import Swiper, { Autoplay, Pagination, Navigation } from 'swiper';
 
 export default {
   init() {
-    
-
     const swiper = new Swiper('.swiper', {
-      modules: [Navigation, Pagination],
-      speed: 1100,
+      modules: [Navigation, Pagination, Autoplay],
+      speed: 900,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -15,7 +13,12 @@ export default {
         el: '.swiper-pagination',
         clickable: true,
       },
-      effect: 'cards',
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
     });
 
 

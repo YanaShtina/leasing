@@ -83,6 +83,7 @@ $b: '.form';
 
     @include mobile {
       gap: rem(15px) 0;
+      width: 100%;
     }
   }
 

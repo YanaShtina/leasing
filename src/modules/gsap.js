@@ -32,10 +32,10 @@ export default {
     gsap.from('.leasing__item._1', {
       scrollTrigger: {
         trigger:'.leasing',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
-      x:-300,
+      x:-30,
       opacity: 0,
       duration:1,
       delay:0,
@@ -44,10 +44,10 @@ export default {
     gsap.from('.leasing__item._3', {
       scrollTrigger: {
         trigger:'.leasing',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
-      x:300,
+      x:30,
       opacity: 0,
       duration:1,
       delay:0.7,
@@ -56,7 +56,7 @@ export default {
     gsap.from('.leasing__item._2', {
       scrollTrigger: {
         trigger:'.leasing',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:0,
@@ -69,7 +69,7 @@ export default {
     gsap.from('.steps__item._1', {
       scrollTrigger: {
         trigger:'.steps',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:-10,
@@ -81,7 +81,7 @@ export default {
     gsap.from('.steps__item._2', {
       scrollTrigger: {
         trigger:'.steps',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:-10,
@@ -93,7 +93,7 @@ export default {
     gsap.from('.steps__item._3', {
       scrollTrigger: {
         trigger:'.steps',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:-10,
@@ -105,7 +105,7 @@ export default {
     gsap.from('.steps__item._4', {
       scrollTrigger: {
         trigger:'.steps',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:0,
@@ -117,7 +117,7 @@ export default {
     gsap.from('.steps__item._5', {
       scrollTrigger: {
         trigger:'.steps',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:0,
@@ -129,7 +129,7 @@ export default {
     gsap.from('.steps__btn-info', {
       scrollTrigger: {
         trigger:'.steps',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:0,
@@ -144,7 +144,7 @@ export default {
     gsap.from('.we__item._1', {
       scrollTrigger: {
         trigger:'.we',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:-20,
@@ -156,7 +156,7 @@ export default {
     gsap.from('.we__item._2', {
       scrollTrigger: {
         trigger:'.we',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:-10,
@@ -168,7 +168,7 @@ export default {
     gsap.from('.we__item._3', {
       scrollTrigger: {
         trigger:'.we',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:10,
@@ -180,7 +180,7 @@ export default {
     gsap.from('.we__item._4', {
       scrollTrigger: {
         trigger:'.we',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       x:20,
@@ -194,7 +194,7 @@ export default {
     gsap.from('.partners__item._4', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-300 0',
       },
       scale:0,
@@ -205,7 +205,7 @@ export default {
     gsap.from('.partners__item._8', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,
@@ -216,7 +216,7 @@ export default {
     gsap.from('.partners__item._1', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,
@@ -227,7 +227,7 @@ export default {
     gsap.from('.partners__item._9', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,
@@ -238,7 +238,7 @@ export default {
     gsap.from('.partners__item._7', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,
@@ -249,7 +249,7 @@ export default {
     gsap.from('.partners__item._3', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,
@@ -260,7 +260,7 @@ export default {
     gsap.from('.partners__item._5', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,
@@ -271,7 +271,7 @@ export default {
     gsap.from('.partners__item._2', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,
@@ -282,7 +282,7 @@ export default {
     gsap.from('.partners__item._6', {
       scrollTrigger: {
         trigger:'.partners__item',
-        markers: true,
+        markers: false,
         start: '-700 0',
       },
       scale:0,

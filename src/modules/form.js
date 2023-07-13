@@ -11,16 +11,18 @@ export default {
       let formData = new FormData(form);
       console.log('formData', formData);
 
-      let response = await fetch('mail.php', {
+      let response = await fetch('../mail.php', {
         method: 'POST',
         body:formData,
 
         
-      })
+      });
+
+      console.log('response', response);
 
       if(response.ok) {
         let result = await response.json;
-        alert(result.message);
+        console.log('result', result, response)
         form.reset();
       } else {
         console.log('ошибка');

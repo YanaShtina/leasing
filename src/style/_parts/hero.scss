@@ -211,7 +211,7 @@ $b: '.hero';
       }
 
       @include mobile {
-        right: 0;
+        right: rem(30px);
         top: rem(-30px);
       }
 
