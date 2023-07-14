@@ -10,21 +10,22 @@
 
           
 
-          <div class="popup__form-wrap">
-            <form class="popup__form" action="">
+          <div class="popup__form-wrap ">
+            <form class="popup__form" action="POST">
               <div class="popup__input-wrap input-wrap _tel">
                 <div class="error-text">введите имя </div>
                 <span> </span>
-                <input class="popup__input input " type="text" placeholder="Вашe имя">
+                <input class="popup__input input " name='popupName' type="text" placeholder="Вашe имя">
               </div>
 
               <div class="popup__input-wrap input-wrap _tel">
                 <div class="error-text">некорректный номер </div>
                 <span> </span>
-                <input class="popup__input input js-tel" type="text" placeholder="Ваш номер телефона">
+                <input class="popup__input input js-tel" name='popupTel'  type="text" placeholder="Ваш номер телефона">
               </div>
         
               <button class="popup__btn btn">Оставить заявку</button>
+              <div class='form__sended'>Спасибо, сообщение отправлено</div>
             </form>
           </div>
   

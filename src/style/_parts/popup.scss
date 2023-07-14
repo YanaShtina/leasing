@@ -87,6 +87,16 @@ backdrop-filter: blur(7px);
   @include mobile {
     flex-direction: column;
   }
+
+  &.sended {
+    .form__sended {
+      display: block;
+    }
+
+    .popup__btn {
+      display: none;
+    }
+  }
 }
 
 
