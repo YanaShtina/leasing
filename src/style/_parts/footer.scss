@@ -59,6 +59,10 @@
 
     span {
       border-bottom: 1px  solid $p-accent-color;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     @include tablet {

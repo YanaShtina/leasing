@@ -2,7 +2,7 @@ import IMask from 'imask';
 
 export default {
   init() {
-    const masks = document.querySelectorAll('.js-tel');
+/*     const masks = document.querySelectorAll('.js-tel');
     if (!masks) return;
     
 
@@ -37,6 +37,6 @@ export default {
           }
         }) 
       
-    })
+    }) */
   }
 }

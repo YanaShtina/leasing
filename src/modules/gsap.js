@@ -4,7 +4,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   init() {
-    console.log('gsap', gsap);
     const leftItem = document.querySelector('.hero__info.time');
     const rigthItem = document.querySelector('.hero__info.avans');
 

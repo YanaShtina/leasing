@@ -35,9 +35,11 @@
         <input id="6" type="text" class="input" placeholder="Регион" name='region'>
       </div>
 
-      <div class="input-wrap">
+      <div class="input-wrap _tel">
+    
         <label for="7">Контактный номер</label>
-        <input id="7" type="text" class="input js-tel" placeholder="Номер" name='number'>
+        <input id="7" type="text" required class="input js-tel" placeholder="Номер" name='number'>
+        <div class="error-text">некорректный номер </div>
       </div>
 
       <div class="form__bottom">
@@ -48,12 +50,13 @@
               Ознакомлен(а) с условиями <a href="policy.html">политики конфиденциальности</a>
             </label>
           </div>
+           <span class = 'check-policy'>Ознакомьтесь с условиями политики конфиденциальности выше</span>
         </div>
-
+       
         <button class="btn form__btn" type='submit'>ОСТАВИТЬ ЗАЯВКУ</button>
 
         <div class='form__sended'>Спасибо, сообщение отправлено</div>
-        </div>
+      </div>
 
     
 

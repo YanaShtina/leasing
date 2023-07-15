@@ -258,6 +258,18 @@ body {
       display: block;
     }
   }
+
+  .error-text {
+    display: none;
+  }
+
+  &.error {
+    
+    .error-text {
+      color: red;
+      display: block;
+    }
+  }
 }
 
 .burger {
@@ -386,6 +398,18 @@ body {
         }
       }
     }
+  }
+ }
+
+ .check-policy {
+  display: none;
+
+  &.active {
+    display: block;
+    font-size: rem(12px);
+    line-height: 120%;
+    margin-top: rem(12px);
+    color: $p-accent-color;
   }
  }
 

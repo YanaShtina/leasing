@@ -74,10 +74,14 @@ backdrop-filter: blur(7px);
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .form__bottom {
+    width: 100%;
+  }
 }
 
 .popup__form-wrap {
- width: rem(300px);
+ width: 100%;
 }
 
 .popup__form {
