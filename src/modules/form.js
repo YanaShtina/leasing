@@ -26,15 +26,12 @@ export default {
             if (mask.masked.isComplete === false && mask.masked.rawInputValue.length > 0) {
               m.closest(".input-wrap").classList.add('error');
               complited = false;
-              console.log('blur if');
             } else if (mask.masked.isComplete === true && mask.masked.rawInputValue.length >= 0) {
               m.closest(".input-wrap").classList.remove('error');
               complited = true;
-              console.log('blur else if1');
             } else if (mask.masked.isComplete === false && mask.masked.rawInputValue.length === 0) {
               m.closest(".input-wrap").classList.remove('error');
               complited = false;
-              console.log('blur else if2');
             }
           }) 
       })
@@ -45,12 +42,10 @@ export default {
         const mask = IMask(m, maskOptions);
 
         complited = mask.masked.isComplete;
-        console.log('mmm', complited);
       })
 
       const checkboxes = f.querySelectorAll('.checkbox');
       checkboxes.forEach((c) => {
-        console.log('checkbox', c.checked);
 
         c.addEventListener('change', () => {
           const warningMessage =  c.closest('.policy__checkbox').nextElementSibling;
@@ -69,7 +64,6 @@ export default {
         const input = f.querySelector('.input-wrap._tel');
         const checkbox = f.querySelector('.checkbox');
         e.preventDefault();
-        console.log('mmm', checkbox.checked);
 
         if(complited === true && checkbox.checked === true) {
           let formData = new FormData(f);
