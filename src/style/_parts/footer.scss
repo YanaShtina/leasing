@@ -1,6 +1,7 @@
 .footer {
   background: $p-background-gradient;
   color: #fff;
+  line-height: 130%;
 
   &__container {
     padding: rem(54px) rem($p-padding-pc);
@@ -13,6 +14,8 @@
 
     @include mobile {
       padding: rem(25px) rem($p-padding-mobile);
+      flex-direction: column;
+      align-items: flex-start;
     }
 
   }
@@ -33,29 +36,44 @@
     }
   }
 
+  &__left-add {
+    display: flex;
+    flex-direction: column;
+    margin-right: rem(64px);
+    // width: rem(150px);
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: rem(8px);
+    }
+  }
+
   &__right {
     display: flex;
+    align-items: center;
 
     @include tablet {
       flex-direction: column;
+      align-items: flex-start;
      
     }
   }
 
   &__link {
-    margin: 0 rem(32px);
+    margin: 0;
     @include tablet {
       width: min-content;
     }
 
     @include mobile {
       margin: 0;
-      margin-bottom: rem(16px);
+      width: max-content;
+      // margin-bottom: rem(16px);
     }
   }
 
   &__warning {
-    max-width: rem(500px);
+    max-width: rem(400px);
 
     span {
       border-bottom: 1px  solid $p-accent-color;
@@ -70,8 +88,13 @@
     }
 
     @include mobile {
-      max-width: rem(180px);
+      max-width: rem(300px);
+      margin-bottom: rem(8px);
     }
+  }
+
+  .header__logo {
+    display: none;
   }
   
   .header__tels {
@@ -95,9 +118,14 @@
   .header__tel {
     font-size: rem(16px);
     line-height: 110%;
+    margin-bottom: 0;
 
     @include tablet {
       font-size: rem(14px);
     }
+  }
+
+  .header__tel:first-child {
+    margin-bottom: 0;
   }
 }
