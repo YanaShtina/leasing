@@ -2,28 +2,50 @@
   padding: rem($p-padding-pc);
   line-height: 110%;
 
+  @include mobile {
+    padding: rem($p-padding-mobile);
+  }
+
   &__title {
     font-size: rem(42px);
    
     font-family: $p-font-medium;
     font-weight: 700;
     margin-bottom: rem(32px);
+
+    @include mobile {
+      font-size: rem(26px);
+    }
   }
 
   &__subtitle {
     font-family: $p-font-medium;
     font-size: rem(22px);
     margin-bottom: rem(16px);
+
+    @include mobile {
+      font-size: rem(18px);
+      margin-bottom: rem(12px);
+    }
   }
 
   &__wrap {
-    margin-bottom: rem(32px)
+    margin-bottom: rem(32px);
+
+    @include mobile {
+      margin-bottom: rem(24px);
+    }
+
   }
 
   p {
     font-family: $p-font-regular;
     font-size: rem(16px);
     margin-bottom: rem(4px);
+
+    @include mobile {
+      font-size: rem(14px);
+    }
 
 
   }

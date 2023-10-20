@@ -45,6 +45,10 @@
     @include mobile {
       margin-right: 0;
       margin-bottom: rem(8px);
+
+      a {
+        display: inline;
+      }
     }
   }
 

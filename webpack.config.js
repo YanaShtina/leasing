@@ -49,7 +49,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'policy.html',
       inject: 'body',
-      template: 'nunjucks-html-loader!./src/templates/policy.njk',
+      template: 'nunjucks-html-loader!./src/templates/policy.html',
     }), 
 
     new MiniCssExtractPlugin({
