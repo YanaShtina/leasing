@@ -54,9 +54,13 @@
   }
 
   &__left {
+    width: 50%;
+    flex-shrink: 0;
+    margin-right: rem(50px);
     @include mobile {
       width: 100%;
       margin-bottom: 0;
+      margin-right: 0;
     }
   }
 

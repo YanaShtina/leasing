@@ -80,7 +80,7 @@ export default {
     
             setTimeout(() => {
               f.classList.remove('sended');;
-            }, 3000);
+            }, 5000);
     
           } else {
             console.log('ошибка');
