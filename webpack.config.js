@@ -42,7 +42,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       inject: 'body',
-      template: 'nunjucks-html-loader!./src/templates/_index.njk',
+      template: 'nunjucks-html-loader!./src/templates/_index.html',
       minify: false,
     }), 
 

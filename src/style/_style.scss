@@ -108,10 +108,10 @@ body {
 .h1 {
   font-family: $p-font-medium;
   font-weight: 700;
-  font-size: rem(55px);
+  font-size: rem(48px);
   line-height: 110%;
   max-width: rem(960px);
-  color: #fff;
+  color: #f7f7f7;
   text-transform: uppercase;
 
   @include tablet {

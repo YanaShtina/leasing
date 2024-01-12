@@ -37,8 +37,36 @@ $b: '.hero';
   &__title {
     margin-right: rem(80px);
 
+    ._small {
+      font-size: rem(28px);
+      text-transform: none;
+      font-family: $p-font-regular;
+      opacity: 0.8;
+
+      @include mobile {
+        font-size: rem(18px);
+      }
+    }
+
+    ._color {
+      font-size: rem(28px);
+      color: #fff;
+      font-family: $p-font-medium;
+
+
+      @include mobile {
+        font-size: rem(18px);
+      }
+    }
+
+    ._second {
+      display: inline-block;
+      max-width: rem(550px);
+      margin-top: rem(12px);
+    }
+
     @include mobile {
-      margin-right: rem(24px);
+      margin-right: rem(20px);
     }
   }
 

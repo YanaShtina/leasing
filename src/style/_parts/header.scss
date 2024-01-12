@@ -73,7 +73,8 @@ $b: '.header';
   }
 
   &__nav-item {
-    margin-right: rem(30px);
+    margin-right: rem(20px);
+    font-size: rem(17px);
     transition: color 0.3s ease-in;
     &:last-child {
       margin-right: 0;
